@@ -1,0 +1,32 @@
+[debug] [2018-07-25T00:06:25.821Z] ----------------------------------------------------------------------
+[debug] [2018-07-25T00:06:25.824Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Jorge\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-07-25T00:06:25.824Z] CLI Version:   4.0.0
+[debug] [2018-07-25T00:06:25.824Z] Platform:      win32
+[debug] [2018-07-25T00:06:25.824Z] Node Version:  v10.6.0
+[debug] [2018-07-25T00:06:25.828Z] Time:          Tue Jul 24 2018 19:06:25 GMT-0500 (GMT-05:00)
+[debug] [2018-07-25T00:06:25.828Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-25T00:06:25.846Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-25T00:06:25.846Z] > authorizing via signed-in user
+[debug] [2018-07-25T00:06:25.850Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/tacofy-2f5e1  
+  
+ Tue Jul 24 2018 19:06:25 GMT-0500 (GMT-05:00)
+[debug] [2018-07-25T00:06:28.611Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-25T00:06:28.613Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/tacofy-2f5e1/tokens  
+  
+ Tue Jul 24 2018 19:06:28 GMT-0500 (GMT-05:00)
+[debug] [2018-07-25T00:06:30.554Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-25T00:06:30.555Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/tacofy-2f5e1  
+  
+ Tue Jul 24 2018 19:06:30 GMT-0500 (GMT-05:00)
+[debug] [2018-07-25T00:06:31.709Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Jorge\Documents\Proyectos\tacofy-web\tacofy'...
+[info] 
+[debug] [2018-07-25T00:06:31.718Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1054393517966/clients/_:getWebAppConfig  
+  
+ Tue Jul 24 2018 19:06:31 GMT-0500 (GMT-05:00)
+[debug] [2018-07-25T00:06:32.873Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./
+[info] +  hosting: Local server: http://localhost:5000
+
