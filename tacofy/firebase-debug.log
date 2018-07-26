@@ -1,32 +1,43 @@
-[debug] [2018-07-25T00:06:25.821Z] ----------------------------------------------------------------------
-[debug] [2018-07-25T00:06:25.824Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Jorge\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-07-25T00:06:25.824Z] CLI Version:   4.0.0
-[debug] [2018-07-25T00:06:25.824Z] Platform:      win32
-[debug] [2018-07-25T00:06:25.824Z] Node Version:  v10.6.0
-[debug] [2018-07-25T00:06:25.828Z] Time:          Tue Jul 24 2018 19:06:25 GMT-0500 (GMT-05:00)
-[debug] [2018-07-25T00:06:25.828Z] ----------------------------------------------------------------------
+[debug] [2018-07-25T23:46:58.406Z] ----------------------------------------------------------------------
+[debug] [2018-07-25T23:46:58.408Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Jorge\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-07-25T23:46:58.408Z] CLI Version:   4.0.0
+[debug] [2018-07-25T23:46:58.409Z] Platform:      win32
+[debug] [2018-07-25T23:46:58.409Z] Node Version:  v10.6.0
+[debug] [2018-07-25T23:46:58.411Z] Time:          Wed Jul 25 2018 18:46:58 GMT-0500 (GMT-05:00)
+[debug] [2018-07-25T23:46:58.411Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-07-25T00:06:25.846Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-07-25T00:06:25.846Z] > authorizing via signed-in user
-[debug] [2018-07-25T00:06:25.850Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/tacofy-2f5e1  
+[debug] [2018-07-25T23:46:58.421Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-25T23:46:58.422Z] > authorizing via signed-in user
+[debug] [2018-07-25T23:46:58.423Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-07-25T23:46:58.424Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/9lB749Wa_B0Uzdd7ozKsgQjE7qld9UhaqD7JCfGfoA0',
+  client_id:
+   '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope:
+   'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Wed Jul 25 2018 18:46:58 GMT-0500 (GMT-05:00)
+[debug] [2018-07-25T23:46:58.897Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-25T23:46:58.974Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/tacofy-2f5e1  
   
- Tue Jul 24 2018 19:06:25 GMT-0500 (GMT-05:00)
-[debug] [2018-07-25T00:06:28.611Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-25T00:06:28.613Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/tacofy-2f5e1/tokens  
+ Wed Jul 25 2018 18:46:58 GMT-0500 (GMT-05:00)
+[debug] [2018-07-25T23:46:59.528Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-25T23:46:59.529Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/tacofy-2f5e1/tokens  
   
- Tue Jul 24 2018 19:06:28 GMT-0500 (GMT-05:00)
-[debug] [2018-07-25T00:06:30.554Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-25T00:06:30.555Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/tacofy-2f5e1  
+ Wed Jul 25 2018 18:46:59 GMT-0500 (GMT-05:00)
+[debug] [2018-07-25T23:46:59.988Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-25T23:46:59.989Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/tacofy-2f5e1  
   
- Tue Jul 24 2018 19:06:30 GMT-0500 (GMT-05:00)
-[debug] [2018-07-25T00:06:31.709Z] <<< HTTP RESPONSE 200
+ Wed Jul 25 2018 18:46:59 GMT-0500 (GMT-05:00)
+[debug] [2018-07-25T23:47:00.490Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'C:\Users\Jorge\Documents\Proyectos\tacofy-web\tacofy'...
 [info] 
-[debug] [2018-07-25T00:06:31.718Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1054393517966/clients/_:getWebAppConfig  
+[debug] [2018-07-25T23:47:00.497Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1054393517966/clients/_:getWebAppConfig  
   
- Tue Jul 24 2018 19:06:31 GMT-0500 (GMT-05:00)
-[debug] [2018-07-25T00:06:32.873Z] <<< HTTP RESPONSE 200
+ Wed Jul 25 2018 18:47:00 GMT-0500 (GMT-05:00)
+[debug] [2018-07-25T23:47:02.262Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: ./
 [info] +  hosting: Local server: http://localhost:5000
 
