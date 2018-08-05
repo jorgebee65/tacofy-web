@@ -4,6 +4,7 @@ import './firebase';
 import Vue from 'vue'
 import VueFire from 'vuefire'
 import App from './App'
+import router from './router'
 import jQuery from 'jquery'
 import 'materialize-css'
 import 'materialize-css/dist/css/materialize.css'
@@ -34,6 +35,7 @@ Firebase.auth().onAuthStateChanged(function(user){
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  components: { App },
-  template: '<App/>'
+  router,
+  template: '<App/>',
+  components: { App }
 })
