@@ -1,5 +1,18 @@
 <template>
   <div>
+    <nav>
+      <div class="nav-wrapper amber">
+        <a href="#" class="brand-logo titles" style="padding-left: 20px;">Tacofy</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="sass.html">Nosotros</a></li>
+          <li><a href="badges.html">Contacto</a></li>
+          <li><a href="collapsible.html">Registrate</a></li>
+          <li><a id="fbBtnLogIn" v-on:click="login()">Iniciar Sesión</a></li>
+          <li><a id="fbBtnLogOut" v-on:click="logOut()">Cerrar Sesión</a></li>
+          <li><a  class="dropdown-trigger" href="#!" data-target="dropdown1"><i class="material-icons">more_vert</i></a></li>
+        </ul>
+      </div>
+    </nav>
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
@@ -35,7 +48,7 @@
             <div class="col s12 m3" v-for="taq in taquerias">
               <div class="card">
                 <div class="card-image">
-                  <img v-bind:src="taq.imagen" />
+                  <img :src="getImageUrl(taq.id)" />
                   <span class="card-title">{{taq.nombre}}</span>
                   <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                 </div>
@@ -50,19 +63,9 @@
 </template>
 
 <script>
-import Firebase from 'firebase'
+
 import getTaquerias from './api'
-
-let config = {
-    apiKey: "AIzaSyALugq0aR2V1thE_6WnNT61AHIqjxpneCc",
-    authDomain: "tacofy-2f5e1.firebaseapp.com",
-    databaseURL: "https://tacofy-2f5e1.firebaseio.com",
-    projectId: "tacofy-2f5e1",
-    storageBucket: "tacofy-2f5e1.appspot.com",
-    messagingSenderId: "1054393517966"
-}
-
-let app = Firebase.initializeApp(config);
+import Firebase from 'firebase';
 
 export default {
   name: 'app',
@@ -76,6 +79,29 @@ export default {
     $('.parallax').parallax()
     //$('.sidenav').sidenav()
     $(".dropdown-trigger").dropdown()
+  },
+  methods:{
+    getImageUrl: function(id){
+      return "http://localhost:8080/tacofy/taquerias/"+id+"/image";
+    },
+    login: function(){
+      console.log('funciona boton');
+      var provider = new Firebase.auth.FacebookAuthProvider();
+      provider.addScope('public_profile');
+      Firebase.auth().signInWithPopup(provider)
+      .then(function(datosUsuario){
+        console.log(datosUsuario);
+      }).catch(function(error){
+        console.log(error);
+      })
+    },
+    logOut: function(){
+      var provider = new Firebase.auth.GoogleAuthProvider();
+      console.log('funciona logout');
+      Firebase.auth().signOut().then(function(){
+        alert('Se ha cerrado la sesión');
+      })
+    }
   }
 }
 
