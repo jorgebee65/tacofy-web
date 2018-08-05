@@ -4,3 +4,4 @@ export default function getTaquerias(){
 	return fetch(URL)
 	  .then(res => res.json())
 }
+

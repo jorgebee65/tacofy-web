@@ -37,7 +37,7 @@
 		                <div class="card-image">
 		                  <img :src="getImageUrl(taq.id)" />
 		                  <span class="card-title">{{taq.nombre}}</span>
-		                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+		                  <router-link class="btn-floating halfway-fab waves-effect waves-light red" v-bind:to="{name: 'view-taq', params:{taq_id: taq.id}}"><i class="material-icons">add</i></router-link>
 		                </div>
 		                <div class="card-content">
 		                  <p>{{taq.ubicacion}}</p>
@@ -49,8 +49,8 @@
 	</div>
 </template>
 <script>
-	import getTaquerias from '../api'
-	
+	import axios from 'axios'
+	const URL = "http://localhost:8080/tacofy/taquerias"
 	export default{
 		name: 'dashboard',
 		data(){
@@ -59,7 +59,9 @@
 			}
 		},
 	  mounted: function(){
-	    getTaquerias().then(taquerias => this.taquerias = taquerias)
+	    axios.get(URL).then(response => {
+	    	this.taquerias = response.data	
+	    })
 	    $('.parallax').parallax()
 	  },
 	  methods:{
